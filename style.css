@@ -6,28 +6,38 @@
 
 body {
   height: 100vh;
-  background-image: linear-gradient(rgb(106, 214, 178), rgb(100, 100, 184));
+  background-color: rgb(212, 246, 204);
 }
 
-h1 {
-  text-align: center;
-  padding: 40px;
-  font-family: "space mono";
-  font-size: 3em;
+header {
+  font-family: monospace;
+  padding: 10px;
+  color: rgb(61, 58, 51);
+  background-color: rgb(139, 206, 147);
+}
+header h1 {
+  display: inline-block;
+  transition: color 0.14s;
+}
+header h1:hover {
+  color: rgb(250, 72, 49);
 }
 
 #center-input-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 30px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 10%;
+  font-size: 1.3em;
 }
 #center-input-container #input-container {
   display: inline-block;
   margin: auto;
   padding: 30px 20px;
-  background-color: rgb(74, 74, 128);
-  color: rgb(240, 240, 240);
+  background-color: rgb(238, 142, 90);
+  color: rgb(255, 255, 255);
   border-radius: 20px;
 }
 #center-input-container input:not(#done-btn) {
@@ -36,16 +46,28 @@ h1 {
   text-align: center;
   border: none;
   border-radius: 4px;
+  font-size: 0.7em;
+  margin: 4px;
 }
 #center-input-container #done-btn {
-  padding: 5px;
+  padding: 10px 20px;
   margin-left: 40px;
+  background: rgb(68, 13, 13);
+  color: white;
+  border-radius: 18px;
+  transition: background-color 0.2s, color 0.2s;
+  font-weight: 900;
+}
+#center-input-container #done-btn:hover {
+  background-color: white;
+  color: black;
 }
 
 #result-shape {
   width: 40vh;
+  border: 2px solid black;
   aspect-ratio: 1;
   margin: auto;
   border-radius: 15px 26px 8px 0px;
-  background-color: rgb(73, 72, 73);
+  background-color: rgb(233, 233, 233);
 }/*# sourceMappingURL=style.css.map */
