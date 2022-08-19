@@ -2,7 +2,7 @@ $clrGradient1: rgb(106, 214, 178);
 $clrGradient2:rgb(100, 100, 184);
 $inputCard: rgb(74, 74, 128);
 $cardFont: rgb(240, 240, 240);
-
+$resultShape: rgb(73, 72, 73);
 
 @mixin border {
     border: 1px solid red;
@@ -24,10 +24,14 @@ body {
 }
 h1 {
     text-align: center;
+    padding: 40px;
+    font-family: 'space mono';
+    font-size: 3em;
 }
 
 #center-input-container {
     @include flexCenter();
+    padding: 30px;
     #input-container {
         display: inline-block;
         margin: auto;
@@ -49,8 +53,10 @@ h1 {
     }
 }
 #result-shape {
-    @include border();
+    // @include border();
     width: 40vh;
     aspect-ratio: 1;
     margin: auto;
+    border-radius: 15px 26px 8px 0px;
+    background-color: $resultShape;
 }

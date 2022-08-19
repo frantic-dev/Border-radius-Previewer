@@ -11,12 +11,16 @@ body {
 
 h1 {
   text-align: center;
+  padding: 40px;
+  font-family: "space mono";
+  font-size: 3em;
 }
 
 #center-input-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px;
 }
 #center-input-container #input-container {
   display: inline-block;
@@ -39,8 +43,9 @@ h1 {
 }
 
 #result-shape {
-  border: 1px solid red;
   width: 40vh;
   aspect-ratio: 1;
   margin: auto;
+  border-radius: 15px 26px 8px 0px;
+  background-color: rgb(73, 72, 73);
 }/*# sourceMappingURL=style.css.map */
