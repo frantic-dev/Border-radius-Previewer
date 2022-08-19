@@ -1,0 +1,56 @@
+$clrGradient1: rgb(106, 214, 178);
+$clrGradient2:rgb(100, 100, 184);
+$inputCard: rgb(74, 74, 128);
+$cardFont: rgb(240, 240, 240);
+
+
+@mixin border {
+    border: 1px solid red;
+}
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient($clrGradient1,
+    $clrGradient2);
+}
+h1 {
+    text-align: center;
+}
+
+#center-input-container {
+    @include flexCenter();
+    #input-container {
+        display: inline-block;
+        margin: auto;
+        padding: 30px 20px;
+        background-color: $inputCard;
+        color: $cardFont;
+        border-radius: 20px;
+    }
+    input:not(#done-btn) {
+        width: 30px;
+        padding: 5px 0;
+        text-align: center;
+        border: none;
+        border-radius: 4px;
+    }
+    #done-btn {
+        padding: 5px;
+        margin-left: 40px;
+    }
+}
+#result-shape {
+    @include border();
+    width: 40vh;
+    aspect-ratio: 1;
+    margin: auto;
+}
