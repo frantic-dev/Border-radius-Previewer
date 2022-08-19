@@ -1,5 +1,5 @@
 $bodyBg:rgb(212, 246, 204);
-$inputCard: rgb(238, 142, 90);
+$inputCard: rgb(255, 126, 57);
 $cardFont: rgb(255, 255, 255);
 $resultShape: rgb(233, 233, 233);
 $header: rgb(139, 206, 147);
@@ -10,10 +10,10 @@ $doneFont: white;
 @mixin border {
     border: 1px solid red;
 }
-@mixin flexCenter {
+@mixin flexCenter() {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -25,10 +25,13 @@ $doneFont: white;
 body {
     height: 100vh;
     background-color: $bodyBg;
+    font-size: 1.3em;
 }
 header {
-    font-family: monospace;
+    font-family: sans-serif;
+    font-size: 0.8em;
     padding: 10px;
+    @include flexCenter();
     color: $headerFont;
     background-color: $header;
     h1 {
@@ -38,12 +41,27 @@ header {
             color: rgb(250, 72, 49);
         }
     }
+    ul {
+        @include flexCenter();
+        padding: 5px;
+        #no-dot{
+            list-style: none;
+        }
+        a {
+           text-decoration: none;
+           padding-right: 5px;
+           color: white;
+           transition: color 0.2s;
+           &:hover {
+            color: black;
+           }
+        }
+    }
 }
-
 #center-input-container {
     @include flexCenter();
     padding-top: 10%;
-    font-size: 1.3em;
+    font-size: max(min(3vw, 1.3em),0.8em );
     #input-container {
         display: inline-block;
         margin: auto;
