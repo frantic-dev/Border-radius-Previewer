@@ -95,8 +95,9 @@ header {
 }
 #result-shape {
     width: 40vh;
+    height: 40vh;
     border: 2px solid black;
-    aspect-ratio: 1;
+    // aspect-ratio: 1;
     margin: auto;
     border-radius: 15px 26px 8px 0px;
     background-color: $resultShape;
