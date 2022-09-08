@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/frantic-dev/Border-radius-Previewer#readme",
   "devDependencies": {
-    "eslint": "^8.23.0"
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
